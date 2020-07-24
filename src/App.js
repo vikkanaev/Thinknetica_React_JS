@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Hello from './Hello';
+import BookCard from './BookCard';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello name='World'/>
-        <Hello name='Eath'/>
-        <Hello name='Mars'/>
+        <BookCard book={this.props.book} />
       </div>
     );
   }
