@@ -1,9 +1,9 @@
 import React from 'react';
 
-class AutorCard extends React.Component {
+class AuthorCard extends React.Component {
   render() {
     const {
-      autor: {
+      author: {
         name, email, bio, avatar,
       },
     } = this.props;
@@ -22,7 +22,7 @@ class AutorCard extends React.Component {
   }
 }
 
-export default AutorCard;
+export default AuthorCard;
 
 const styles = {
   container: {

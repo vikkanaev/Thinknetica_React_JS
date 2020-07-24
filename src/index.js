@@ -9,7 +9,7 @@ const book = {
   language: 'English',
   progress: 12,
   cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Alice%27s_Adventures_in_Wonderland_cover_%281865%29.jpg/440px-Alice%27s_Adventures_in_Wonderland_cover_%281865%29.jpg',
-  autor: {
+  author: {
     name: 'Lewis Carroll',
     email: 'LewisCarroll@gmail.com.uk',
     avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/LewisCarrollSelfPhoto.jpg/440px-LewisCarrollSelfPhoto.jpg',

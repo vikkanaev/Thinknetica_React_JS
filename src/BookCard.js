@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AutorCard from './AutorCard';
+import AuthorCard from './AuthorCard';
 
 class BookCard extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class BookCard extends React.Component {
           </div>
         </div>
         <div style={styles.container}>
-          <AutorCard autor={this.props.book.autor}/>
+          <AuthorCard author={this.props.book.author}/>
         </div>
         <button>Subscribe</button>
       </div>
