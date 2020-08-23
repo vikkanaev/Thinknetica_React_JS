@@ -16,5 +16,7 @@ module.exports = {
   ],
   rules: {
     'max-len': ['error', { code: 120 }],
+    'react/prop-types': false,
+    'no-use-before-define': ['error', { variables: false }],
   },
 };

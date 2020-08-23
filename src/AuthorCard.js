@@ -1,5 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable react/prop-types */
 import React from 'react';
 
 class AuthorCard extends React.Component {
