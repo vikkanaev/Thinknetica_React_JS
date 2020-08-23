@@ -2,17 +2,33 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-import AuthorCard from './AuthorCard';
+import AuthorList from './AuthorList';
+import SubscriptionInfoModal from './SubscriptionInfoModal';
 
 class BookCard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      subscribers: this.props.book.subscribers,
+      topSubscribedLimit: 100,
+    };
+  }
+
+  isTopSubscribed() {
+    return this.state.subscribers >= this.state.topSubscribedLimit;
+  }
+
   render() {
     const {
       book: {
-        cover, title, description, minPrice, suggestrdPrice,
+        cover, title, description, minPrice, suggestrdPrice, authors,
       },
     } = this.props;
+    const { subscribers } = this.state;
+
     return (
-      <div>
+      <div style={styles.bookItem}>
         <div style={styles.container}>
           <div style={styles.imageBox}>
             <img style={styles.image} src={cover} alt={title}/>
@@ -22,12 +38,19 @@ class BookCard extends React.Component {
             <div>{description}</div>
             <div>MINIMUM PRICE: ${minPrice}</div>
             <div>SUGGESTED PRICE: ${suggestrdPrice}</div>
+            <div>Subscribers: {subscribers}</div>
+            {
+              this.isTopSubscribed() && <>
+                <div style={styles.topSubscribed}>This is TOP-Subscribed Book!</div>
+              </>
+            }
           </div>
         </div>
         <div style={styles.container}>
-          <AuthorCard author={this.props.book.author}/>
+          <AuthorList authors={authors}/>
         </div>
         <button>Subscribe</button>
+        <SubscriptionInfoModal/>
       </div>
     );
   }
@@ -39,6 +62,13 @@ const styles = {
   container: {
     display: 'flex',
   },
+  bookItem: {
+    background: '#f0f0f0',
+    border: '1px solid black',
+    padding: '15px',
+    marginBottom: '10px',
+    borderRadius: '8px',
+  },
   imageBox: {
     maxWidth: '200px',
   },
@@ -47,5 +77,8 @@ const styles = {
   },
   cardBody: {
     flex: '1',
+  },
+  topSubscribed: {
+    color: 'red',
   },
 };
