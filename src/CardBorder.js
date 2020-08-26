@@ -3,7 +3,7 @@ import React from 'react';
 class CardBorder extends React.Component {
   render() {
     return (
-      <div style={styles.item}> 
+      <div style={styles.item}>
         {this.props.children}
       </div>
     );

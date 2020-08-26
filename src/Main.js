@@ -15,5 +15,5 @@ export default Main;
 const style = {
   main: {
     padding: '10px 10%',
-  }
+  },
 };

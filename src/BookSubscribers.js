@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import React from 'react';
 
 class BookSubscribers extends React.Component {
@@ -7,7 +8,7 @@ class BookSubscribers extends React.Component {
 
   render() {
     const { subscribers, topSubscribedLimit } = this.props;
-    
+
     return (
       <>
         <div>Subscribers: {subscribers}</div>
@@ -17,7 +18,7 @@ class BookSubscribers extends React.Component {
           </>
         }
       </>
-    )
+    );
   }
 }
 

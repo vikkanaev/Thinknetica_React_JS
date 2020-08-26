@@ -2,7 +2,11 @@ import React from 'react';
 
 class AuthorCard extends React.Component {
   render() {
-    const { author: { name, email, bio, avatar } } = this.props;
+    const {
+      author: {
+        name, email, bio, avatar,
+      },
+    } = this.props;
     return (
       <div style={styles.container}>
         <div style={styles.imageBox}>
@@ -23,17 +27,17 @@ export default AuthorCard;
 const styles = {
   container: {
     display: 'flex',
-    padding: '10px'
+    padding: '10px',
   },
   imageBox: {
     maxWidth: '150px',
   },
   image: {
     width: '100%',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   cardBody: {
     flex: '1',
-    padding: '10px'
+    padding: '10px',
   },
 };

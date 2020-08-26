@@ -1,14 +1,12 @@
 import React from 'react';
 
-
-
 class Header extends React.Component {
   render() {
     return (
       <div style={style.header}>
         <div>
           <img src={this.props.logo}/>
-        </div> 
+        </div>
         <div style={style.title}>
           {this.props.title}
         </div>
@@ -34,6 +32,6 @@ const style = {
   title: {
     display: 'flex',
     justifyContent: 'center',
-    width: '100%' 
-  }
+    width: '100%',
+  },
 };

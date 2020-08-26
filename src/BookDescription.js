@@ -2,8 +2,12 @@ import React from 'react';
 
 class BookDescription extends React.Component {
   render() {
-    const { book: { cover, title, description, minPrice, suggestrdPrice } } = this.props;
-    
+    const {
+      book: {
+        cover, title, description, minPrice, suggestrdPrice,
+      },
+    } = this.props;
+
     return (
       <>
         <div style={styles.container}>
@@ -19,7 +23,7 @@ class BookDescription extends React.Component {
           </div>
         </div>
       </>
-    )
+    );
   }
 }
 
@@ -28,7 +32,7 @@ export default BookDescription;
 const styles = {
   container: {
     display: 'flex',
-    padding: '10px'
+    padding: '10px',
   },
   imageBox: {
     maxWidth: '200px',
@@ -38,6 +42,6 @@ const styles = {
   },
   cardBody: {
     flex: '1',
-    padding: '10px'
+    padding: '10px',
   },
 };
