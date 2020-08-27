@@ -5,12 +5,13 @@ import Main from './Main';
 import BookList from './BookList';
 import Footer from './Footer';
 import logo from './img/logo.png';
+import UserInfo from './UserInfo';
 
 class App extends React.Component {
   render() {
     return (
       <>
-        <Header title='MyBookSite' logo={logo}/>
+        <Header title='MyBookSite' logo={logo} user={<UserInfo/>}/>
         <Main>
           <BookList {...this.props} />
         </Main>

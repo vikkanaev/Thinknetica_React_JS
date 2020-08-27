@@ -5,6 +5,7 @@ import BookDescription from './BookDescription';
 import BookSubscribers from './BookSubscribers';
 import AuthorList from './AuthorList';
 import SubscriptionInfoModal from './SubscriptionInfoModal';
+import FeedbackForm from './FeedbackForm';
 
 class BookCard extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class BookCard extends React.Component {
         <AuthorList authors={authors}/>
         <button>Subscribe</button>
         <SubscriptionInfoModal/>
+        <FeedbackForm/>
       </CardBorder>
     );
   }

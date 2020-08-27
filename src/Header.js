@@ -10,6 +10,9 @@ class Header extends React.Component {
         <div style={style.title}>
           {this.props.title}
         </div>
+        <div style={style.user}>
+          {this.props.user}
+        </div>
       </div>
     );
   }
@@ -33,5 +36,10 @@ const style = {
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
+  },
+  user: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    width: '30%',
   },
 };
