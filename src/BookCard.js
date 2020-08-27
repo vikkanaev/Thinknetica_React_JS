@@ -2,7 +2,6 @@ import React from 'react';
 
 import CardBorder from './CardBorder';
 import BookDescription from './BookDescription';
-import BookSubscribers from './BookSubscribers';
 import AuthorList from './AuthorList';
 import SubscriptionInfoModal from './SubscriptionInfoModal';
 import FeedbackForm from './FeedbackForm';
@@ -22,10 +21,7 @@ class BookCard extends React.Component {
 
     return (
       <CardBorder>
-        <BookDescription {...this.props}
-          subscribers={<BookSubscribers {...this.state}/> }
-        >
-        </BookDescription>
+        <BookDescription {...this.props} subscribersInfo={this.state}/>
         <AuthorList authors={authors}/>
         <button>Subscribe</button>
         <SubscriptionInfoModal/>

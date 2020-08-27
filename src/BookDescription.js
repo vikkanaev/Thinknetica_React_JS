@@ -1,4 +1,5 @@
 import React from 'react';
+import BookSubscribers from './BookSubscribers';
 
 class BookDescription extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class BookDescription extends React.Component {
             <div>{description}</div>
             <div>MINIMUM PRICE: ${minPrice}</div>
             <div>SUGGESTED PRICE: ${suggestrdPrice}</div>
-            <div>{this.props.subscribers}</div>
+            <div><BookSubscribers {...this.props}/></div>
           </div>
         </div>
       </>

@@ -1,4 +1,5 @@
 import React from 'react';
+import UserInfo from './UserInfo';
 
 class Header extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Header extends React.Component {
           {this.props.title}
         </div>
         <div style={style.user}>
-          {this.props.user}
+          {<UserInfo/>}
         </div>
       </div>
     );

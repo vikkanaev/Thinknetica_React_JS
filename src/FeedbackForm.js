@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
+import Field from './Field';
 
 class FeedbackForm extends React.Component {
   constructor(props) {
@@ -13,10 +14,11 @@ class FeedbackForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(variableName, event) {
-    this.setState({ [variableName]: event.target.value });
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   handleSubmit(event) {
@@ -29,27 +31,27 @@ class FeedbackForm extends React.Component {
     return (
       <div style={styles.form}>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>Name</label>
-            <input
-              value={this.state.name}
-              onChange={(e) => this.handleChange('name', e)}
-            />
-          </div>
-          <div>
-            <label>Email</label>
-            <input
-              value={this.state.email}
-              onChange={(e) => this.handleChange('email', e)}
-            />
-          </div>
-          <div>
-            <label>Question</label>
-            <textarea
-              value={this.state.question}
-              onChange={(e) => this.handleChange('question', e)}
-            />
-          </div>
+          <Field
+            type='input'
+            name='name'
+            label='Name'
+            onChange={this.handleChange}
+            value={this.state.name}
+          />
+          <Field
+            type='input'
+            name='email'
+            label='Email'
+            onChange={this.handleChange}
+            value={this.state.email}
+          />
+          <Field
+            type='textarea'
+            name='question'
+            label='Question'
+            onChange={this.handleChange}
+            value={this.state.question}
+          />
           <input type="submit" value="Отправить" />
         </form>
       </div>
