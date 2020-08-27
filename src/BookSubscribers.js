@@ -7,7 +7,7 @@ class BookSubscribers extends React.Component {
   }
 
   render() {
-    const { subscribersInfo: { subscribers, topSubscribedLimit } } = this.props;
+    const { subscribers, topSubscribedLimit } = this.props;
 
     return (
       <>

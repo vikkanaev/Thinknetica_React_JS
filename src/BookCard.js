@@ -21,7 +21,7 @@ class BookCard extends React.Component {
 
     return (
       <CardBorder>
-        <BookDescription {...this.props} subscribersInfo={this.state}/>
+        <BookDescription { ...{ ...this.props, ...this.state } } />
         <AuthorList authors={authors}/>
         <button>Subscribe</button>
         <SubscriptionInfoModal/>
