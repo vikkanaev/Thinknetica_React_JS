@@ -1,46 +1,23 @@
 import React from 'react';
 
-import logo from './img/logo.png';
+import Header from './Header';
+import Main from './Main';
 import BookList from './BookList';
+import Footer from './Footer';
+import logo from './img/logo.png';
 
 class App extends React.Component {
   render() {
     return (
       <>
-        <header style={style.header}>
-          <img src={logo}/>
-          MyBookSite
-        </header>
-        <main style={style.main}>
-          <BookList books={this.props.books} />
-        </main>
-        <footer style={style.footer}>
-          &copy;VikKanaev {new Date().getFullYear()}
-        </footer>
+        <Header title='MyBookSite' logo={logo}/>
+        <Main>
+          <BookList {...this.props} />
+        </Main>
+        <Footer copyright='Viktor Kanaev'/>
       </>
     );
   }
 }
 
 export default App;
-
-const style = {
-  header: {
-    backgroundColor: '#222222',
-    color: '#fff',
-    minHeight: '50px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-    fontSize: '1.2rem',
-    fontWeight: 'bold',
-  },
-  main: {
-    padding: '10px 10%',
-  },
-  footer: {
-    padding: '0 10%',
-    marginTop: '50px',
-  },
-};

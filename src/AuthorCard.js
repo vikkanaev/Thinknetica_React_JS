@@ -13,9 +13,9 @@ class AuthorCard extends React.Component {
           <img style={styles.image} src={avatar} alt={name}/>
         </div>
         <div style={styles.cardBody}>
-          <div>{name}</div>
-          <div>{email}</div>
+          <div><strong>{name}</strong></div>
           <div>{bio}</div>
+          <div>Email: {email}</div>
         </div>
       </div>
     );
@@ -27,14 +27,17 @@ export default AuthorCard;
 const styles = {
   container: {
     display: 'flex',
+    padding: '10px',
   },
   imageBox: {
     maxWidth: '150px',
   },
   image: {
     width: '100%',
+    borderRadius: '50%',
   },
   cardBody: {
     flex: '1',
+    padding: '10px',
   },
 };

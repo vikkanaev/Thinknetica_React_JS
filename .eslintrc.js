@@ -8,6 +8,11 @@ module.exports = {
     'airbnb-base',
     'plugin:react/recommended',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   parserOptions: {
     ecmaVersion: 11,
     sourceType: 'module',
@@ -16,7 +21,7 @@ module.exports = {
   ],
   rules: {
     'max-len': ['error', { code: 120 }],
-    'react/prop-types': false,
+    'react/prop-types': 0,
     'no-use-before-define': ['error', { variables: false }],
   },
 };
